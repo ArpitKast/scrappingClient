@@ -1,0 +1,20 @@
+.saveBtn {
+     border: 1px solid #4e069b;
+     color: #4e069b;
+     background-color: rgb(5, 127, 127);
+
+}
+
+.search {
+     margin: 0 20px 0 10px;
+}
+
+table {
+     width: 100%;
+}
+
+.upperBtn {
+     button {
+          margin: 10px;
+     }
+}

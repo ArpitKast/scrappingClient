@@ -1,0 +1,36 @@
+<div class="container">
+     <div class="row">
+          <div class="col-md-4">
+               <div class="card p-3 mb-4">
+                    <div class="d-flex align-items-center">
+                         <img src="{{data.logo}}" alt="Netflix Logo" class="logo">
+                         <div class="ms-3">
+                              <h4>{{data.companyName}} </h4>
+                              <p>{{data.description}} </p>
+                              <p><strong>Phone:</strong>{{data.phoneNumber}} </p>
+                              <p><strong>Email:</strong>{{data.email}} </p>
+                         </div>
+                    </div>
+               </div>
+
+               <div class="card p-3">
+                    <h5>Company Details</h5>
+                    <p><strong>Website:</strong> {{data.companyName}}.com</p>
+                    <p><strong>Description:</strong>{{data.description}} </p>
+                    <p><strong>Phone:</strong>{{data.phoneNumber}} </p>
+                    <p><strong>Email:</strong>{{data.email}} </p>
+                    <p><strong>Facebook:</strong> <a href="{{data.faceBookURL}}">{{data.faceBookURL}}</a></p>
+                    <p><strong>Instagram:</strong> <a href="{{data.instagramURL}}">{{data.instagramURL}}</a></p>
+                    <p><strong>LinkedIn:</strong> <a href="{{data.linkedInURL}}">{{data.linkedInURL}}</a></p>
+                    <p><strong>Address:</strong>{{data.address}} </p>
+               </div>
+          </div>
+          <div class="col-md-8">
+               <div class="card p-3">
+                    <h5>Screenshot of Webpage</h5>
+                    <img src="https://www.netflix.com/images/pages/home/UNLIMITED.webp" alt="Netflix Screenshot"
+                         class="img-fluid">
+               </div>
+          </div>
+     </div>
+</div>

@@ -1,0 +1,57 @@
+<div class="container">
+     <h2>Upload Form</h2>
+     <form (ngSubmit)="onSubmit()" #uploadForm="ngForm">
+          <div class="form-group" style="text-align: center;">
+               <br>
+               <input type="file" id="logo" class="form-control" required (change)="onFileChange($event)">
+          </div>
+          <div class="form-group">
+               <label for="companyName">Company Name:</label>
+               <br>
+               <input type="text" id="companyName" class="form-control" required [(ngModel)]="companyName"
+                    name="companyName">
+          </div>
+          <div class="form-group">
+               <label for="socialMediaLogo">Social Media:</label>
+               <br>
+               <input type="text" id="socialMediaLogo" class="form-control" required [(ngModel)]="socialMediaLogo"
+                    name="socialMediaLogo">
+          </div>
+          <div class="form-group">
+               <label for="description">Description:</label>
+               <br>
+               <textarea id="description" class="form-control" required [(ngModel)]="description"
+                    name="description"></textarea>
+          </div>
+          <div class="form-group">
+               <label for="faceBookURL">Facebook URL:</label>
+               <input type="text" id="faceBookURL" class="form-control" [(ngModel)]="faceBookURL" name="faceBookURL">
+          </div>
+          <div class="form-group">
+               <label for="linkedInURL">LinkedIn URL:</label>
+               <input type="text" id="linkedInURL" class="form-control" [(ngModel)]="linkedInURL" name="linkedInURL">
+          </div>
+          <div class="form-group">
+               <label for="instagramURL">Instagram URL:</label>
+               <input type="text" id="instagramURL" class="form-control" [(ngModel)]="instagramURL" name="instagramURL">
+          </div>
+          <div class="form-group">
+               <label for="address">Address:</label>
+               <br>
+               <input type="text" id="address" class="form-control" [(ngModel)]="address" name="address">
+          </div>
+          <div class="form-group">
+               <label for="phoneNumber">Phone Number:</label>
+               <br>
+               <input type="text" id="phoneNumber" class="form-control" [(ngModel)]="phoneNumber" name="phoneNumber">
+          </div>
+          <div class="form-group">
+               <label for="email">Email:</label>
+               <br>
+               <input type="email" id="email" class="form-control" [(ngModel)]="email" name="email">
+          </div>
+          <div style="text-align: center;">
+               <button type="submit" mat-flat-button class="btn">Submit</button>
+          </div>
+     </form>
+</div>
