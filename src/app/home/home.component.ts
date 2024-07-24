@@ -59,18 +59,27 @@ export class HomeComponent {
      }
 
      openDialogDetail(element: any): void {
-          const dialogRef = this.dialog.open(ShowDetailsComponent, {
-               width: '1000px',
-               height: '600px',
-               data: element
-          });
 
-          dialogRef.afterClosed().subscribe(result => {
-               if (result) {
-                    console.log('Form Data:', result);
-                    this.getdata()
+          this.apirService.getById(element._id).subscribe(res=>{
+               if(res){
+                    const dialogRef = this.dialog.open(ShowDetailsComponent, {
+                         width: '1000px',
+                         height: '600px',
+                         data: res
+                    });
+          
+                    dialogRef.afterClosed().subscribe(result => {
+                         if (result) {
+                              console.log('Form Data:', result);
+                              this.getdata()
+                         }
+                    });
                }
-          });
+          },error=>{
+               console.log(error)
+          })
+
+         
      }
 
      getdata() {

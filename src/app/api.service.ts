@@ -23,6 +23,13 @@ export class ApiService {
           return this.http.request('GET', 'http://localhost:5000/api', { headers: header })
      }
 
+     getById(id:any) {
+          var header = new HttpHeaders({
+               'Access-Control-Allow-Origin': '*',
+          });
+          return this.http.request('GET', `http://localhost:5000/api/${id}`, { headers: header })
+     }
+
      deleteData(body: any) {
           var header = new HttpHeaders({
                'Content-Type': 'application/json',
